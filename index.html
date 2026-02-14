@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speaker Protection Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= Hero Section ================= -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Analysis of the Interpretability of Speaker Protection Using Controlled Frequency Substitution</h1>
+    <p class="subtitle">Anonymous submission to Interspeech 2026</p>
+  </div>
+</div>
+
+<!-- ================= Conversion Visualization ================= -->
+<div class="conversion-visualization">
+  <h2 class="section-title">Conversion Visualization</h2>
+  <div class="section-description" style="text-align: justify;">
+    <p>
+      Clicking the left and right arrow buttons allows navigation through the adjacent Mel spectrograms to observe which frequency band(s) show noticeable structural changes. 
+      In the paper, Figure 2 corresponds to Mel2–Mel5 in the left group of spectrograms shown below the text.
+  </div>
+  <div class="carousel-wrapper">
+    <!-- -------- Group 1 -------- -->
+    <div class="carousel-container">
+      <button class="carousel-btn" id="prev1">&lt;</button>
+      <div class="carousel-item">
+        <div class="mel-container">
+          <img id="mel-img1" src="Conversion_Visualization_1/mel/source.png" alt="Mel Spectrogram">
+          <div id="mel-caption1">Mel 1: Source Speech</div>
+        </div>
+        <div class="audio-container">
+          <audio id="audio-player1" controls src="Conversion_Visualization_1/Speech/Orininal Speech/84_121123_000045_000003.wav"></audio>
+        </div>
+      </div>
+      <button class="carousel-btn" id="next1">&gt;</button>
+    </div>
+
+    <!-- -------- Group 2 -------- -->
+    <div class="carousel-container">
+      <button class="carousel-btn" id="prev2">&lt;</button>
+      <div class="carousel-item">
+        <div class="mel-container">
+          <img id="mel-img2" src="Conversion_Visualization_2/mel/source.png" alt="Mel Spectrogram">
+          <div id="mel-caption2">Mel 1: Source Speech</div>
+        </div>
+        <div class="audio-container">
+          <audio id="audio-player2" controls src="Conversion_Visualization_2/Speech/Orininal Speech/237_134493_000010_000000.wav"></audio>
+        </div>
+      </div>
+      <button class="carousel-btn" id="next2">&gt;</button>
+    </div>
+  </div>
+</div>
+
+<div class="multi-level">
+  <h2 class="section-title">Attribute-Specific Effects under Multi-level Anonymization</h2>
+  <div class="section-description" style="text-align: justify;">
+    <p>
+      This section presents voice samples after L1–L3 anonymization. We use some source and reference speech from <a href="https://versavoice.github.io/" target="_blank">Vevo</a>.
+  </div>
+  <!-- Gender -->
+  <h3 class="subsection-title">Gender Preservation</h3>
+  <table class="audio-table">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>L1 Anon</th>
+        <th>L2 Anon</th>
+        <th>L3 Anon</th>
+        <th>Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/Orininal Speech/260_123286_000028_000000.wav"></audio>
+          <div class="audio-label">Male (From LibriTTS)</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.75/260_123286_000028_000000--3479_153281_000056_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.5_x/260_123286_000028_000000--3479_153281_000056_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.00_x/260_123286_000028_000000--3479_153281_000056_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/reference/3479_153281_000056_000000.wav"></audio>
+          <div class="audio-label">Female (From LibriTTS)</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/Orininal Speech/237_126133_000056_000003.wav"></audio>
+          <div class="audio-label">Female (From LibriTTS)</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.75/237_126133_000056_000003--6370_26876_000018_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.5_x/237_126133_000056_000003--6370_26876_000018_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.00_x/237_126133_000056_000003--6370_26876_000018_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/reference/6370_26876_000018_000000.wav"></audio>
+          <div class="audio-label">Male (From LibriTTS)</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/Orininal Speech/908_157963_000010_000000.wav"></audio>
+          <div class="audio-label">Male (From LibriTTS)</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.75/908_157963_000010_000000--6749_53256_000019_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.5_x/908_157963_000010_000000--6749_53256_000019_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/alhpa_0.00_x/908_157963_000010_000000--6749_53256_000019_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Gender/Speech/reference/6749_53256_000019_000000.wav"></audio>
+          <div class="audio-label">Female (From LibriTTS)</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Emotion -->
+  <h3 class="subsection-title">Emotion Preservation</h3>
+  <table class="audio-table">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>L1 Anon</th>
+        <th>L2 Anon</th>
+        <th>L3 Anon</th>
+        <th>Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/Orininal Speech/03_src_e.wav"></audio>
+          <div class="audio-label">
+            Angry (From 
+            <a href="https://versavoice.github.io/" target="_blank" rel="noopener noreferrer">
+              Vevo
+            </a>)
+          </div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.75/03_src_e--03_ref_e.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.5_x/03_src_e--03_ref_e.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.00_x/03_src_e--03_ref_e.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/reference/03_ref_e.wav"></audio>
+          <div class="audio-label">
+            Neutral (From 
+            <a href="https://versavoice.github.io/" target="_blank" rel="noopener noreferrer">
+              Vevo
+            </a>)
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/Orininal Speech/01_src_e.wav"></audio>
+          <div class="audio-label">
+            Neutral (From 
+            <a href="https://versavoice.github.io/" target="_blank" rel="noopener noreferrer">
+              Vevo
+            </a>)
+          </div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.75/01_src_e--01_ref_e.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.5_x/01_src_e--01_ref_e.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.00_x/01_src_e--01_ref_e.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/reference/01_ref_e.wav"></audio>
+          <div class="audio-label">
+            Angry (From 
+            <a href="https://versavoice.github.io/" target="_blank" rel="noopener noreferrer">
+              Vevo
+            </a>)
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/Orininal Speech/Ses01F_impro01_M011.wav"></audio>
+          <div class="audio-label">Angry (From IEMOCAP)</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.75/Ses01F_impro01_M011--4948_28015_000059_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.5_x/Ses01F_impro01_M011--4948_28015_000059_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/alhpa_0.00_x/Ses01F_impro01_M011--4948_28015_000059_000000.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Emotion/Speech/reference/4948_28015_000059_000000.wav"></audio>
+          <div class="audio-label">Unknown (From LibriTTS)</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Accent -->
+  <h3 class="subsection-title">Accent Preservation</h3>
+  <table class="audio-table">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>L1 Anon</th>
+        <th>L2 Anon</th>
+        <th>L3 Anon</th>
+        <th>Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/Orininal Speech/01_src.wav"></audio>
+          <div class="audio-label">
+            Mandarin-accented (From 
+            <a href="https://versavoice.github.io/" target="_blank" rel="noopener noreferrer">
+              Vevo
+            </a>)
+          </div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.75/01_src--01_ref.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.5_x/01_src--01_ref.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.00_x/01_src--01_ref.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/reference/01_ref.wav"></audio>
+          <div class="audio-label">
+            Hindi-accented (From 
+            <a href="https://versavoice.github.io/" target="_blank" rel="noopener noreferrer">
+              Vevo
+            </a>)
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/Orininal Speech/03_src.wav"></audio>
+          <div class="audio-label">
+            Mandarin-accented (From 
+            <a href="https://versavoice.github.io/" target="_blank" rel="noopener noreferrer">
+              Vevo
+            </a>)
+          </div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.75/03_src--03_ref.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.5_x/03_src--03_ref.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.00_x/03_src--03_ref.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/reference/03_ref.wav"></audio>
+          <div class="audio-label">
+            Arabic-accented (From 
+            <a href="https://versavoice.github.io/" target="_blank" rel="noopener noreferrer">
+              Vevo
+            </a>)
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/Orininal Speech/hindi6.mp3"></audio>
+          <div class="audio-label">Hindi-accented (From SAR)</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.75/hindi6--5933_91994_000016_000001.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.5_x/hindi6--5933_91994_000016_000001.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/alhpa_0.00_x/hindi6--5933_91994_000016_000001.wav"></audio>
+          <div class="audio-label">&nbsp;</div>
+        </td>
+        <td class="audio-cell">
+          <audio controls src="Accent/Speech/reference/5933_91994_000016_000001.wav"></audio>
+          <div class="audio-label">Unknown (From LibriTTS)</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
+
+
+</body>
+
+<!-- ================= Script ================= -->
+<script>
+  const melImages1 = [
+    'Conversion_Visualization_1/mel/source.png',
+    'Conversion_Visualization_1/mel/split1.0.png',
+    'Conversion_Visualization_1/mel/split0.75.png',
+    'Conversion_Visualization_1/mel/split0.5.png',
+    'Conversion_Visualization_1/mel/split0.25.png',
+    'Conversion_Visualization_1/mel/split0.0.png'
+  ];
+  const audioFiles1 = [
+    'Conversion_Visualization_1/Speech/Orininal Speech/84_121123_000045_000003.wav',
+    'Conversion_Visualization_1/Speech/alhpa_1.0/84_121123_000045_000003--1988_24833_000004_000001.wav',
+    'Conversion_Visualization_1/Speech/alhpa_0.75/84_121123_000045_000003--1988_24833_000004_000001.wav',
+    'Conversion_Visualization_1/Speech/alhpa_0.5/84_121123_000045_000003--1988_24833_000004_000001.wav',
+    'Conversion_Visualization_1/Speech/alhpa_0.25/84_121123_000045_000003--1988_24833_000004_000001.wav',
+    'Conversion_Visualization_1/Speech/alhpa_0.00/84_121123_000045_000003--1988_24833_000004_000001.wav'
+  ];
+  const captions1 = [
+    'Mel 1: Source Speech',
+    'Mel 2: src-src',
+    'Mel 3: α=0.75',
+    'Mel 4: α=0.50',
+    'Mel 5: α=0.25',
+    'Mel 6: α=0.00'
+  ];
+  let index1 = 0;
+  function updateCarousel1() {
+    document.getElementById('mel-img1').src = melImages1[index1];
+    const audio1 = document.getElementById('audio-player1');
+    audio1.src = audioFiles1[index1];
+    audio1.load();
+    document.getElementById('mel-caption1').textContent = captions1[index1];
+  }
+  document.getElementById('prev1').onclick = () => { index1 = (index1 - 1 + 6) % 6; updateCarousel1(); };
+  document.getElementById('next1').onclick = () => { index1 = (index1 + 1) % 6; updateCarousel1(); };
+
+  const melImages2 = [
+    'Conversion_Visualization_2/mel/source.png',
+    'Conversion_Visualization_2/mel/split1.0.png',
+    'Conversion_Visualization_2/mel/split0.75.png',
+    'Conversion_Visualization_2/mel/split0.5.png',
+    'Conversion_Visualization_2/mel/split0.25.png',
+    'Conversion_Visualization_2/mel/split0.0.png'
+  ];
+  const audioFiles2 = [
+    'Conversion_Visualization_2/Speech/Orininal Speech/237_134493_000010_000000.wav',
+    'Conversion_Visualization_2/Speech/alhpa_1.0/237_134493_000010_000000--3079_164971_000014_000003.wav',
+    'Conversion_Visualization_2/Speech/alhpa_0.75/237_134493_000010_000000--3079_164971_000014_000003.wav',
+    'Conversion_Visualization_2/Speech/alhpa_0.5/237_134493_000010_000000--3079_164971_000014_000003.wav',
+    'Conversion_Visualization_2/Speech/alhpa_0.25/237_134493_000010_000000--3079_164971_000014_000003.wav',
+    'Conversion_Visualization_2/Speech/alhpa_0.00/237_134493_000010_000000--3079_164971_000014_000003.wav'
+  ];
+  const captions2 = [
+    'Mel 1: Source Speech',
+    'Mel 2: src-src',
+    'Mel 3: α=0.75',
+    'Mel 4: α=0.50',
+    'Mel 5: α=0.25',
+    'Mel 6: α=0.00'
+  ];
+  let index2 = 0;
+  function updateCarousel2() {
+    document.getElementById('mel-img2').src = melImages2[index2];
+    const audio2 = document.getElementById('audio-player2');
+    audio2.src = audioFiles2[index2];
+    audio2.load();
+    document.getElementById('mel-caption2').textContent = captions2[index2];
+  }
+  document.getElementById('prev2').onclick = () => { index2 = (index2 - 1 + 6) % 6; updateCarousel2(); };
+  document.getElementById('next2').onclick = () => { index2 = (index2 + 1) % 6; updateCarousel2(); };
+
+</script>
+
+</html>
