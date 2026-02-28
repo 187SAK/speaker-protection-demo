@@ -77,8 +77,8 @@ h2.section-title {
 
 .mel-container img {
   width: 90%;
-  height: 220px;          /* 固定统一高度 */
-  object-fit: contain;    /* 保持比例，不裁剪 */
+  height: 220px;          
+  object-fit: contain;    
   border-radius: 6px;
   display: block;
   margin: 0 auto;
@@ -161,28 +161,25 @@ audio {
   table-layout: fixed;
 }
 
-/* 表格内容仍然居中（audio） */
 .audio-table td {
   padding: 12px 8px;
   text-align: center;
   border-bottom: 1px solid #eee;
 }
 
-/* 🔥 核心修改：表头强制左对齐 */
 .audio-table th {
   font-size: 14px;
   font-weight: 600;
   color: #444;
   background-color: #f3f3f3;
 
-  text-align: center !important;     /* 强制左对齐 */
+  text-align: center !important;     
   padding: 12px 16px;
   vertical-align: bottom;
   width: 20%;
   white-space: nowrap;
 }
 
-/* audio 控件大小 */
 .audio-table audio {
   width: 100%;
   max-width: 200px;
@@ -203,7 +200,7 @@ audio {
 .audio-label a {
   color: inherit;
   text-decoration: none;
-  font-weight: 500; /* 可选，让它稍微突出一点 */
+  font-weight: 500; 
 }
 
 .audio-label a:hover {
